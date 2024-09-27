@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: "neue haas grotesk display pro";
+}
+*::selection{
+    color: #FFF;
+background-color: #fe330abd;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    background-color: #EFEAE3;
+    position: relative;
+    
+}
+.page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.nav{
+    /* background-color: rgb(136, 104, 104); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5vw 2.4vw;
+}
+.nav1{
+    display: flex;
+    gap: 1vw;
+}
+.nav1 h4 {
+    font-size: 1.1vw;
+    text-decoration: none;
+    padding: 0.7vw 1.5vw;
+    border: 2px solid #D8D3CD;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.nav1 h4 a{
+    text-decoration: none;
+    font-weight: 400;
+    z-index: 9;
+    position: relative;
+}
+.nav1 h4::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    transition: all ease-in-out 0.2s;
+    z-index: 0;
+}
+.nav1 h4:hover::after{
+    bottom: 0;
+    border-radius: 30%;
+}
+.nav1 h4:hover a{
+    color: #fff;
+}
+.hero{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding:7vw 4vw 4.7vw 2.5vw;
+    /* background-color: yellow; */
+}
+.hero p{
+    font-size: 1.9vw;
+    font-weight: 900;
+    width: 27%;
+    letter-spacing: -.05vw;
+    line-height: 1;
+}
+.hero h1{
+    font-size: 10.5vw;
+    width: 50%;
+    /* background-color: red; */
+    text-align: right;
+    font-weight: 700;
+    line-height: 8.5vw;
+    letter-spacing: -.2vw;
+}
+.line{
+    height: 2px;
+    width: 95%;
+    background-color: #D8D3CD;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    margin-bottom: 5vw;
+}
+.page1 .mover{
+    width: 56vw;
+    height: 36vw;
+    background-color: #FE340A;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    right: -15%;
+    top: 80%;
+}
+.page1 .mover1{
+    width: 90%;
+    height: 100%;
+    background-color:#FE340A;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    left: 0;
+    animation-name: anime1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.page1 .mover2{
+    width: 65%;
+    height: 100%;
+    background-color: #FE340A;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    left: 10%;
+    animation-name: anime2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+
+@keyframes anime1 {
+   0%{
+        rotate: 0deg;
+    }
+    40%{
+        rotate: 20deg;
+    }
+    70%{
+        rotate: -20deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+
+@keyframes anime2 {
+    from{
+        transform: translate(15%,-15%);
+    }
+    to{
+        transform: translate(-15%,15%);
+       
+    }
+}
+
+.page2 video{
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+    width: 97%;
+    border-radius: 40px;
+    z-index: 99;
+}
+.page2{
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 3vw;
+}
+
+.marque{
+    position: relative;
+    min-height: 40vh;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: 5vw;
+
+}
+.marque::-webkit-scrollbar{
+    display: none;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 13s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.con h1{
+    font-size: 10vw;
+    display: inline-block;
+} 
+.con .gola{
+    height: 4vw;
+    width: 4vw;
+    background-color: #FE340A;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+
+.page3{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2vw 7vw;
+    position: relative;
+}
+
+.page3-content>h1{
+    font-size: 4.5vw;
+    line-height: 4.6vw;  
+    font-weight: 900;
+    letter-spacing: -.18vw;
+    width: 90%;
+    position: relative;
+    z-index: 9;
+}
+.page3-content2{
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    width: 23%;
+}
+.page3-content2 img{
+    border-radius: 10px;
+    margin-top: 10vw;
+    object-fit: cover;
+}
+.page3-content2 p{
+    font-size: 1.1vw;
+    line-height: 1.4;
+}
+.page3 .mover{
+    width: 26vw;
+    height: 26vw;
+    background-color: #FE340A;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    left: 20%;
+    top: 35%;
+    z-index: 8;
+}
+.page3 .mover1{
+    width: 110%;
+    height: 110%;
+    background-color:#FE340A;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    left: 0;
+    animation-name: anime1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.page3 .mover2{
+    width: 110%;
+    height: 110%;
+    background-color: #FE340A;
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    left: 10%;
+    animation-name: anime2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+
+.page4{
+    min-height: 100vh;
+    width: 100%;
+    padding: 4vw 0;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #FF9831;
+    transition: all ease 0.2s;
+    z-index: 98;
+}
+.elem{
+    height: 7vw;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #888888;
+
+}
+.elem:hover .overlay{
+    transform: translateY(100%);
+}
+.elem H1{
+    font-size: 3vw;
+    z-index: 99;
+}
+.elem H5{
+    font-size: 1.3vw;
+    font-weight: 300;
+    text-align: right;
+}
+.elem h6{
+    font-size: 0.9vw;
+    font-weight: 100;
+    text-align: right;
+    opacity: 0.6;
+}
+.new-fixed{
+    height: 30vw;
+    width: 23vw;
+    right: 30%;
+    position: fixed;
+    top: 20%;
+    z-index: 999;
+    border-radius: 20px;
+    display: none;
+    pointer-events: none;
+}
+
+.page5{
+    height: 60vh;
+    width: 100%;
+    background-color: transparent;
+}
+
+/* CSS for the footer */
+.footer {
+    background-color: #EFEAE3;
+    color: #000;
+    padding: 4vw 2.5vw;
+    font-family: "neue haas grotesk display pro", sans-serif;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo img {
+    max-width: 150px;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 4vw;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+    font-weight: 700;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 0.5vw;
+  }
+  
+  .footer-column ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1vw;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #FE340A;
+  }
+  
+  .footer-newsletter h3 {
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+    font-weight: 700;
+  }
+  
+  .footer-newsletter form {
+    display: flex;
+  }
+  
+  .footer-newsletter input[type="email"] {
+    padding: 0.5vw 1vw;
+    border: 2px solid #D8D3CD;
+    border-radius: 50px 0 0 50px;
+    font-size: 1vw;
+    outline: none;
+  }
+  
+  .footer-newsletter button {
+    padding: 0.5vw 1.5vw;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-newsletter button:hover {
+    background-color: #FE340A;
+  }
+  
+  .footer-bottom {
+    margin-top: 3vw;
+    text-align: center;
+    font-size: 0.9vw;
+    color: #888;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: 2vw;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      gap: 2vw;
+    }
+  
+    .footer-newsletter form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .footer-newsletter input[type="email"],
+    .footer-newsletter button {
+      border-radius: 50px;
+      margin-bottom: 1vw;
+    }
+  }
+  
